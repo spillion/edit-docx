@@ -1,0 +1,32 @@
+电子邮件系统使用TCP传送邮件，为什么有时会遇到邮件发送失败的情况?为什么有时
+对方会收不到发送的邮件?
+2. MIME与SMTP的关系是怎样的?
+3.下面列出的是使用TCP/IP 协议通信的两台主机A和B传送邮件的对话过程，请根据这
+个对话回答问题。
+A:220 beta.gov simple mail transfer service ready
+B:HELO alpha.edu
+A: 250 beta.gov
+B:MAIL FROM:<smith@alpha.edu>
+A:250 mail accepted
+B:RCPT TO:<jones@beta.gov>
+A:250 recipient accepted
+B:RCPT TO:<green@beta.gov>
+A:550 no such user here
+B:RCPT TO:brown@beta.gov
+A: 250 recipient accepted
+B:DATA
+A:354 start mail input;end with<CR><LF>.<CR><LF>
+B:Date:Fri 27 May 2011 14:16:21 BJ
+B:From:smith@alpha.edu
+B:….
+B:
+B:.
+A:250 OK
+B:QUIT
+A:221 beta.gov service closing transmission channel.
+问题:
+(1）邮件接收方和发送方机器的全名是什么?发邮件的用户名是什么?
+(2）发送方想把邮件发给几个用户?他们各叫什么名字?
+(3）哪些用户能收到该邮件?
+(4）传送邮件所使用的传输层协议叫什么名字?
+(5）为了接收邮件，接收方机器上等待连接的端口号是多少?
